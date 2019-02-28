@@ -1,3 +1,10 @@
+/**
+ * Math Calc
+ * Solves for angles and side length using sine law and cosine law
+ * Shaurya Manocha
+ * Last updated Feb 28 2019
+ */
+
 import java.util.Scanner;
 class mathCalc{
     public static Scanner scan = new Scanner(System.in);//scanner to input values
