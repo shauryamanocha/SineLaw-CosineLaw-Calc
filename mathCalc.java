@@ -99,13 +99,13 @@ class mathCalc{
         /**
          * converts Math.cos to work with degress
          */
-        return Math.toDegrees(Math.cos(Math.toRadians(input)));
+        return Math.cos(Math.toRadians(input));
     }
     public static double acos(double input){
         /**
          * converts Math.acos to work with degress
          */
-        return Math.toDegrees(Math.acos(Math.toRadians(input)));
+        return Math.toDegrees(Math.acos(input));
     }
 
     public static void sineLaw(){
@@ -118,7 +118,7 @@ class mathCalc{
                 double complimentarySideLength = askDouble("Enter the complimentary side length (a)");//get all the components of the equation
                 double remainingSideLength = askDouble("Enter the remaining side length (b)");
                 double remainingAngle = askDouble("Enter the remaining angle (B)");
-                result = asin((complimentarySideLength*sin(remainingAngle))/remainingSideLength);//perform the equation
+                result = (asin((complimentarySideLength*sin(remainingAngle))/remainingSideLength));//perform the equation
             break;
             case "B":
                 say("Solving for side a");//indication message
@@ -146,14 +146,14 @@ class mathCalc{
                 a = askDouble("Enter the side length of side a");//get all necessary components of the equation
                 b = askDouble("Enter the side length of side b");
                 c = askDouble("Enter the side length of side c");
-                result = acos(((a*a)-(b*b)-(c*c))/-(2*a*b));//perform the equation
+                result = (acos(((a*a)-(b*b)-(c*c))/(-2*(a*b))));
             break;
-            case "B":
+            case "S":
                 say("Solving for side a");//indication message
                 b = askDouble("Enter the side length of side b");//get all necessary components of the equation
                 c = askDouble("Enter the side length of side c");
                 A = askDouble("Enter the angle of point A");
-                result = (b*b)+(c*c)-2*(b*c)*cos(A);//perform the equation
+                result = Math.sqrt((b*b)+(c*c)-2*(b*c)*cos(A));//perform the equation
             break;
             default:
                 say("Please enter a valid input");//if the menu selection was invalid restart
